@@ -1,0 +1,295 @@
+
+/* GRUNDINSTÄLLNINGAR */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #101426;
+    color: white;
+    line-height: 1.7;
+}
+
+/* HEADER */
+header {
+    background-color: #171d35;
+    padding: 22px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    border-bottom: 2px solid #a78bfa;
+}
+
+.logo {
+    color: #facc15;
+    font-size: 23px;
+    letter-spacing: 2px;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #facc15;
+}
+
+/* STARTSIDA */
+.hero {
+    min-height: 580px;
+    padding: 65px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    background: linear-gradient(135deg, #171d35, #29204b);
+}
+
+.hero-text {
+    max-width: 520px;
+}
+
+.small-title,
+.section-label {
+    color: #facc15;
+    letter-spacing: 4px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.hero h2 {
+    font-size: clamp(38px, 5vw, 65px);
+    line-height: 1.15;
+    margin: 20px 0;
+}
+
+.hero h2 span {
+    color: #facc15;
+}
+
+.hero-text p {
+    color: #d1d5db;
+    margin-bottom: 25px;
+}
+
+.button {
+    display: inline-block;
+    background-color: #facc15;
+    color: #171d35;
+    padding: 13px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background-color: white;
+    transform: translateY(-4px);
+}
+
+.hero-image {
+    width: 370px;
+    max-width: 100%;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 20px;
+    border: 5px solid #a78bfa;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* OM SERIEN */
+.about {
+    padding: 90px 15%;
+    text-align: center;
+}
+
+.about h2,
+.characters h2,
+.facts h2 {
+    font-size: 36px;
+    margin: 10px 0 25px;
+    color: #facc15;
+}
+
+.about > p:not(.section-label) {
+    max-width: 750px;
+    margin: auto;
+    color: #d1d5db;
+}
+
+.quote {
+    margin: 35px auto 0;
+    padding: 25px;
+    max-width: 600px;
+    background-color: #29204b;
+    border-left: 5px solid #facc15;
+    border-radius: 10px;
+    font-size: 20px;
+    font-style: italic;
+}
+
+.quote span {
+    display: block;
+    color: #facc15;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* KARAKTÄRER */
+.characters {
+    background-color: #171d35;
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.character-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.character-card {
+    background-color: #29204b;
+    padding: 30px 20px;
+    border-radius: 15px;
+    border: 1px solid #514078;
+    transition: 0.3s;
+}
+
+.character-card:hover {
+    transform: translateY(-8px);
+    border-color: #facc15;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.emoji {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.character-card h3 {
+    color: #facc15;
+    margin-bottom: 12px;
+}
+
+.character-card p {
+    color: #d1d5db;
+    font-size: 14px;
+}
+
+/* ROLIGA FAKTA */
+.facts {
+    padding: 85px 10%;
+    text-align: center;
+}
+
+.fact-box {
+    max-width: 750px;
+    margin: 30px auto 0;
+    background-color: #171d35;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: left;
+    border: 1px solid #514078;
+}
+
+.fact-box p {
+    padding: 12px;
+    border-bottom: 1px solid #383e56;
+    color: #e5e7eb;
+}
+
+.fact-box p:last-child {
+    border-bottom: none;
+}
+
+/* FOOTER */
+footer {
+    background-color: #171d35;
+    text-align: center;
+    padding: 45px 20px;
+    border-top: 2px solid #a78bfa;
+}
+
+footer h2 {
+    color: #facc15;
+    font-size: 35px;
+    letter-spacing: 5px;
+}
+
+footer p {
+    color: #d1d5db;
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #9299ad;
+}
+
+/* MOBILANPASSNING */
+@media (max-width: 800px) {
+
+    header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image {
+        width: 300px;
+    }
+
+    .character-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about {
+        padding: 65px 8%;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .character-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 50px 6%;
+    }
+
+    .about h2,
+    .characters h2,
+    .facts h2 {
+        font-size: 28px;
+    }
+}
